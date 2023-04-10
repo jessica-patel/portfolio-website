@@ -3,8 +3,8 @@
 
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Portfolio</title>
-        <!--link href="img/favicon.ico" rel="shortcut icon"-->
         <!-- favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0/favicon-32x32.png">
@@ -13,11 +13,17 @@
         <link rel="mask-icon" href="favicon_package_v0/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#2b5797">
         <meta name="theme-color" content="#ffffff">
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body id="work">
         <!-- for the header -->
-        <header>
+        <header id="navigation">
             <div>
                 <a href="index.html">
                     <img src="img/logo.jpg" alt="Jessica Patel Logo">
@@ -34,7 +40,7 @@
         
         <main>
             <!-- for the hero section -->
-            <div>
+            <div id="hero">
                 <div>
                     <h1>Jessica Patel - Emerging UX Designer</h1>
                     <p>Creating accessible, immersive and functional products to optimize user satisfaction.</p>
@@ -42,7 +48,7 @@
             </div>
 
             <!-- for the projects preview -->
-            <div>
+            <div id="project_preview">
                 <div>
                     <h2>My Work</h2>
                     <!-- project preview for Vela -->
@@ -57,7 +63,7 @@
                             <h3>Vela - A UX Case Study</h3>
                             <p>This water-weather forecasting web app delivers convenience and safety to water-sport enthusiasts through visual weather reports that are easy-to-comprehend. Water-sport enthusiasts can quickly view summarized views and full-reports, which is ideal for people on the go! This case study displays my full set of skills in UX/UI such as usability testing, visual design and prototyping.
                             </p>
-                            <a href="vela.html">View Project</a>
+                            <a href="vela.html" class="button">View Project</a>
                         </div>
                     </div>
 
@@ -73,7 +79,7 @@
                             <h3>Game UX Design Competition - Ubisoft Toronto NEXT</h3>
                             <p>This competition involved taking an existing third-person role-playing game, discovering pain points and proposing new UX solutions for a new game. This presentation shows how I compiled desktop research with user surveys to identify pain-points in the game, Assassin’s Creed Odyssey, to propose new solutions revolving around immersion and convenience.
                             </p>
-                            <a href="">View Project</a>
+                            <a href="" class="button">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -87,7 +93,7 @@
                 <p>Have any thoughts or questions about my work? Feel free to reach out to me using the links below!
                 </p>
                 <div>
-                    <a href="mailto:email@hotmail.com">Email me!</a>
+                    <a href="mailto:email@hotmail.com" class="button contact">Email me!</a>
                 </div>
                 <div>
                     <a href="LINKEDIN-URL" target="_blank">

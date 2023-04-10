@@ -1,0 +1,98 @@
+/*
+Colors used:
+Background (very dark blue): #151E23;
+Pop-ups/Bubbles (dark grey): #232E35;
+Text (off-white): #F7F6F9;
+Primary (pink): #ED78A5;
+Secondary (orange): #F19C78;
+Accent (yellow): #F8D77F;
+CTA (light blue): #89D3FB;
+*/
+
+body {
+    background-color: #151e23;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* standard size for body */
+    font-weight: 300;
+    line-height: 1.6; /* 1.6 times the font-size */
+    color: #F7F6F9;
+}
+
+/* CareerFoundry sizings for now*/
+h1, h2, h3, h4 {
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.75em;
+    font-weight: 700;
+}
+  
+h2 {
+    font-size: 2.25em;
+    font-weight: 700;
+}
+  
+h3 {
+    font-size: 1.75em;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.35em;
+    font-weight: 400;
+}
+
+/* setting width for images so they don't distort layout */
+img {
+    width: 100%;
+  }
+
+/* hyperlinks */
+a,
+a:active { /* active: when being clicked */
+    color: #ED78A5; /* might change to CTA colour */
+    text-decoration: none; /* No underlining */
+  }
+
+/* a:visited {
+    color: #F19C78;
+} */
+
+a:hover,
+a:focus {
+    color: #F8D77F;
+    text-decoration: underline; /* Underlining when hovering over a link */
+}
+
+
+/* keep at end */
+.button {
+    display: inline-block;
+    background-color: #ED78A5;
+    color: #F7F6F9; /* needed to override the default link color */
+    font-weight: 400;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid #994c30; /* width of the border, type, color */
+    transition: 0.2s opacity;
+  }
+
+.button:hover {
+    opacity: 0.8; /* Reduces the opacity of the button to 80% */
+    text-decoration: none;
+}
+
+.button.contact {
+    background-color: transparent;
+    color: #ED78A5;
+    text-transform: uppercase;
+    border: 2px solid #ED78A5;
+}
+
+.button.contact:hover {
+    background-color: #ED78A5; /* .button.hover code above already reduced opacity */
+    color: #F7F6F9;
+}
+
+/* might add button-secondary and button-small */
