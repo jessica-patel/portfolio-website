@@ -9,8 +9,12 @@ Accent (yellow): #F8D77F;
 CTA (light blue): #89D3FB;
 */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #151e23;
+    background-color: #151E23;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; /* standard size for body */
     font-weight: 300;
@@ -18,6 +22,24 @@ body {
     color: #F7F6F9;
 }
 
+header {
+    background-color: #232E35;
+    text-align: center;
+    padding: 10px;
+    /* border-bottom: 3px solid #4a4a4a; */
+    /*css-box-shadow ------------*/
+    position: fixed;
+    width: [object Object]px; 
+    height: [object Object]px; 
+    background: #232E35; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1)  ; 
+    -webkit-box-shadow: 0 0 20px rgba(21, 30, 35, 1)  ; 
+    -moz-box-shadow: 0 0 20px rgba(21, 30, 35, 1)  ; 
+
+    width: 100%; /* since position=fixed was used */
+}
+
+/* -- HEADINGS -- */
 /* CareerFoundry sizings for now*/
 h1, h2, h3, h4 {
     line-height: 1.4;
@@ -26,11 +48,15 @@ h1, h2, h3, h4 {
 h1 {
     font-size: 2.75em;
     font-weight: 700;
+    text-align: center;
+    padding: 0.67em 0 0 0;
 }
   
 h2 {
     font-size: 2.25em;
     font-weight: 700;
+    text-align: center;
+    padding: 0;
 }
   
 h3 {
@@ -43,12 +69,30 @@ h4 {
     font-weight: 400;
 }
 
-/* setting width for images so they don't distort layout */
+/* -- IMAGES -- */
 img {
     width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
   }
 
-/* hyperlinks */
+.socials {
+    width: 10%;
+    margin: 5% 5% 0 0;
+    display: inline-block;
+}
+
+.me {
+    width: 50%;
+    
+}
+
+.logo {
+    max-width: 100px;
+}
+
+/* -- HYPERLINKS AND BUTTONS -- */
 a,
 a:active { /* active: when being clicked */
     color: #ED78A5; /* might change to CTA colour */
@@ -65,8 +109,6 @@ a:focus {
     text-decoration: underline; /* Underlining when hovering over a link */
 }
 
-
-/* keep at end */
 .button {
     display: inline-block;
     background-color: #ED78A5;
@@ -96,3 +138,56 @@ a:focus {
 }
 
 /* might add button-secondary and button-small */
+
+/* -- LAYOUT STYLINGS -- */
+.container {
+    padding: 0 15px;
+}
+
+.row {
+    margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+
+#work .row { /* only applying to row class within work id */
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ED78A5;
+}
+
+.center { /* to add center class to any HTML elements */
+    text-align: center;
+}
+
+/* -- NAVIGATION -- */
+
+nav > ul { /* this selects unordered lists within the nav element */
+    list-style-type: none; /* removing bullets */
+    padding: 0; /* removing auto padding from ul */
+}
+
+nav > ul > li { /* this selects list elements in unordered lists within the nav element */
+    display: inline-block; /* moving items to one line */
+}
+
+nav > ul > li > a {
+    padding: 0 15px; /* adding padding */
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ED78A5;
+  }
+
+nav > ul > li > a:hover {
+    color: #F8D77F;
+    text-decoration: none;
+}
+
+/* -- HERO -- */
+#hero {
+    background-color: #232E35;
+    padding: 20px;
+    display: inline-block;
+    /* width: 100%; - am I keeping the border around the hero/header section? */
+}
+
+main {
+    padding-top: 133px;
+}
