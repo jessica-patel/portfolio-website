@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body id="about_page">
         <!-- for the header -->
         <header id="navigation">
             <div class="container">
@@ -56,7 +56,7 @@
                    <!-- row for columns-->
                     <div class="container">
                         <!-- column 1 -->
-                        <div id="story">
+                        <div id="story" class="col-lg-7 container">
                             <h2>My Story</h2>
                             <p>Hi, I'm Jess and thank you for visiting my portfolio! I curate my work here as I progress as a designer. My journey began during my bachelor’s degree in physics and astronomy. While doing research on electrons and ultra-faint dwarf galaxies, I realized that I wanted to work towards something that allowed me to produce tangible results and solutions for people around me. That’s when I found user experience design. This field excited me due to how interdisciplinary and impactful it is.
                             </p>
@@ -65,12 +65,12 @@
                             <a href="files/resume.pdf" target="_blank" class="button contact">Download my CV</a>
                         </div>
                         <!-- column 2 -->
-                        <div id="skills">
+                        <div id="skills" class="col-lg-5 container">
                             <h2>Skills &amp; Tools</h2>
                             <!-- inner overarching row -->
                             <div>
                                 <!-- left column -->
-                                <div> 
+                                <div class="col-md-6 row"> 
                                     <h3>Industry Skills</h3>
                                     <ul>
                                         <li>UX/UI Design</li>
@@ -81,7 +81,7 @@
                                     </ul>
                                 </div>
                                 <!-- right column -->
-                                <div>
+                                <div class="col-md-6 row">
                                     <h3>Tools</h3>
                                     <ul>
                                         <li>Figma</li>
@@ -106,7 +106,7 @@
             </div>
         </main>
 
-        <footer id="contact" class="center">
+        <footer id="contact" class="center container">
             <div>
                 <h2>Get in Touch</h2>
                 <p>Have any thoughts or questions about my work? Feel free to reach out to me using the links below!
@@ -114,14 +114,16 @@
                 <div>
                     <a href="mailto:email@hotmail.com" class="button contact">Email me!</a>
                 </div>
-                <div>
-                    <a href="LINKEDIN-URL" target="_blank">
+                <ul class="socials_links">
+                    <li><a href="LINKEDIN-URL" target="_blank">
                         <img src="img/svg/linkedin.svg" alt="LinkedIn URL" class="socials">
-                    </a>
-                    <a href="BEHANCE-URL" target="_blank">
+                        </a>
+                    </li>
+                    <li><a href="BEHANCE-URL" target="_blank">
                         <img src="img/svg/behance.svg" alt="Behance URL" class="socials">
-                    </a>
-                </div>
+                        </a>
+                    </li>
+                </ul>
                 <p>Copyright Jessica Patel 2023
                 </p>
             </div>

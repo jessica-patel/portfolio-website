@@ -16,7 +16,7 @@ CTA (light blue): #89D3FB;
 body {
     background-color: #151E23;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px; /* standard size for body */
+    font-size: 18px; /* standard size for body is 16px */
     font-weight: 300;
     line-height: 1.6; /* 1.6 times the font-size */
     color: #F7F6F9;
@@ -29,8 +29,8 @@ header {
     /* border-bottom: 3px solid #4a4a4a; */
     /*css-box-shadow ------------*/
     position: fixed;
-    width: [object Object]px; 
-    height: [object Object]px; 
+    width: [object Object]px;
+    height: [object Object]px;
     background: #232E35; 
     box-shadow: 0 0 20px rgba(0, 0, 0, 1)  ; 
     -webkit-box-shadow: 0 0 20px rgba(21, 30, 35, 1)  ; 
@@ -50,18 +50,19 @@ h1 {
     font-weight: 700;
     text-align: center;
     padding: 0.67em 0 0 0;
+    line-height: normal;
 }
   
 h2 {
     font-size: 2.25em;
     font-weight: 700;
-    text-align: center;
-    padding: 0;
+    line-height: normal;
 }
   
 h3 {
-    font-size: 1.75em;
+    font-size: 1.5em;
     font-weight: 400;
+    line-height: normal;
 }
 
 h4 {
@@ -78,18 +79,70 @@ img {
   }
 
 .socials {
-    width: 10%;
+    height: 20px;
     margin: 5% 5% 0 0;
     display: inline-block;
 }
 
+footer > div > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer > div > ul > li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
 .me {
-    width: 50%;
+    width: 25%;
     
 }
 
 .logo {
     max-width: 100px;
+}
+
+.animation {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes color-change {
+    0% {fill: #edc655;}
+    50% {fill: #fcffad;}
+    100% {fill: #f76414;}
+}
+
+@keyframes cloud-move {
+    from {transform: translate(0,50px);}
+    to {transform: translate(200px,50px);}
+}
+
+@keyframes cloud-move-reverse {
+    from {transform: translate(446px,48px);}
+    to {transform: translate(100px, 48px);}
+}
+
+.sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;  
+}
+/* This can be written as:
+.sun {
+    animation: 4s color-change infinite alternate linear;
+} */
+
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 /* -- HYPERLINKS AND BUTTONS -- */
@@ -105,7 +158,6 @@ a:active { /* active: when being clicked */
 
 a:hover,
 a:focus {
-    color: #F8D77F;
     text-decoration: underline; /* Underlining when hovering over a link */
 }
 
@@ -114,14 +166,17 @@ a:focus {
     background-color: #ED78A5;
     color: #F7F6F9; /* needed to override the default link color */
     font-weight: 400;
+    text-decoration: none;
     padding: 10px;
     border-radius: 3px;
     border-bottom: 2px solid #994c30; /* width of the border, type, color */
-    transition: 0.2s opacity;
-  }
+    transition-duration: .2s;
+    transition-property: background-color;
+    /* transitions can be combined into "transition: 0.2s opacity;" */
+}
 
 .button:hover {
-    opacity: 0.8; /* Reduces the opacity of the button to 80% */
+    background-image: linear-gradient(180deg, #ED78A5, #89D3FB); /* Reduces the opacity of the button to 80% */
     text-decoration: none;
 }
 
@@ -173,21 +228,151 @@ nav > ul > li > a {
     text-transform: uppercase;
     font-weight: 700;
     color: #ED78A5;
-  }
+}
 
 nav > ul > li > a:hover {
     color: #F8D77F;
     text-decoration: none;
 }
 
+/* Circle behind */
+/* nav.circleBehind a:before, nav.circleBehind a:after
+{
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #0277bd;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+nav.circleBehind a:after
+{
+    border-width: 2px;
+    transition: all 0.4s;
+}
+
+nav.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+nav.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+} */
+
 /* -- HERO -- */
 #hero {
     background-color: #232E35;
-    padding: 20px;
+    padding: 20px 0;
+    text-align: center;
     display: inline-block;
-    /* width: 100%; - am I keeping the border around the hero/header section? */
+    width: 100%;
 }
 
 main {
-    padding-top: 133px;
+    padding-top: 99px;
+}
+
+[class*="col-"] { /* attribute selector, selects for every class with "col-" */
+    float: left;
+    padding: 10px;
+}
+
+.row::after { /* "clearing" the flow so that other elements don't take the spot of the preview picture */
+    content: "";
+    clear: both;
+    display: table;
+}
+
+main::after { /* "clearing" the flow so that other elements don't take the spot of the preview picture */
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* ------- MEDIA QUERIES ------- */
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) { /* when a screen size (viewport width) is 640px or larger, it needs to use the following styling */
+
+    header {
+        text-align: unset;
+        padding: 20px 20px; /* CF had 20px 0 13px */
+    }
+    
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+
+    .logo {
+        float: left;
+        max-width: 50px;
+        margin: 10px;
+    }
+    
+    .col-md-6 { /* col=column, md=medium devices, 6=6 column span */
+        width: 50%;
+    }
+    
+    #about-page h3 { 
+        margin-top: 0;
+    }
+}
+    
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+
+    .col-lg-7 { /* left column for project preview images */
+        width: 60%;
+    }
+
+    .col-lg-5 { /* right column for project preview blurbs */
+        width: 40%;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav {
+        font-size: 20px;
+    }
+
+    .row {
+        width: 100%;
+        margin: unset;
+    }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
+
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
+
 }
