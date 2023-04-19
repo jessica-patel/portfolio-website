@@ -57,12 +57,15 @@ h2 {
     font-size: 2.25em;
     font-weight: 700;
     line-height: normal;
+    margin-block-end: 0;
 }
   
 h3 {
     font-size: 1.5em;
     font-weight: 400;
     line-height: normal;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 h4 {
@@ -95,8 +98,8 @@ footer > div > ul > li {
 }
 
 .me {
-    width: 25%;
-    
+    width: 45%;
+    max-width: 200px;
 }
 
 .logo {
@@ -105,8 +108,8 @@ footer > div > ul > li {
 
 .animation {
     width: 100%;
-    max-width: 100%;
     height:fit-content;
+    display: inline-block;
 }
 
 @keyframes color-change {
@@ -200,7 +203,7 @@ a:focus {
 }
 
 .row {
-    margin: 25px 0; /* 25px top and bottom, 0 left and right */
+    margin: 25px 0 0 0; /* 25px top and bottom, 0 left and right */
 }
 
 #work .row { /* only applying to row class within work id */
@@ -281,7 +284,7 @@ nav.circleBehind a:hover:after
 }
 
 main {
-    padding-top: 99px;
+    padding-top: 130px;
 }
 
 [class*="col-"] { /* attribute selector, selects for every class with "col-" */
@@ -325,6 +328,10 @@ Medium devices (640px and larger)
         max-width: 50px;
         margin: 10px;
     }
+
+    main {
+        padding-top: 70px;
+    }
     
     .col-md-6 { /* col=column, md=medium devices, 6=6 column span */
         width: 50%;
@@ -360,7 +367,10 @@ Large devices (1024px or larger)
 
     .row {
         width: 100%;
-        margin: unset;
+    }
+
+    main {
+        padding-top: 75px;
     }
 }
 
