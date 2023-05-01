@@ -96,7 +96,7 @@ footer > div > ul > li {
 }
 
 .socials {
-    height: 20px;
+    width: 150%;
     margin: 5% 5% 0 0;
     display: inline-block;
 }
@@ -369,6 +369,10 @@ Medium devices (640px and larger)
 
     .navtoggle li:last-child {
         display: none;
+    }
+
+    .navtoggle.responsive nav { 
+        padding-top: 0px; 
     }
 
     main {
