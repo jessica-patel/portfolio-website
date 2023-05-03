@@ -194,7 +194,8 @@ a:focus {
 }
 
 .button:hover {
-    background-image: linear-gradient(180deg, #ED78A5, #89D3FB); /* Reduces the opacity of the button to 80% */
+    /* background-image: linear-gradient(180deg, #ED78A5, #89D3FB);  */
+    opacity: 80%;/* Reduces the opacity of the button to 80% */
     text-decoration: none;
 }
 
