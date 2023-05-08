@@ -3,7 +3,7 @@ Colors used:
 Background (very dark blue): #151E23;
 Pop-ups/Bubbles (dark grey): #232E35;
 Text (off-white): #F7F6F9;
-Primary (pink): #ED78A5;
+Primary (pink): #ED78A5; new E56D9B
 Secondary (orange): #F19C78;
 Accent (yellow): #F8D77F;
 CTA (light blue): #89D3FB;
@@ -166,7 +166,7 @@ footer > div > ul > li {
 /* -- HYPERLINKS AND BUTTONS -- */
 a,
 a:active { /* active: when being clicked */
-    color: #ED78A5; /* might change to CTA colour */
+    color: #E56D9B; /* might change to CTA colour */
     text-decoration: none; /* No underlining */
   }
 
@@ -181,9 +181,9 @@ a:focus {
 
 .button {
     display: inline-block;
-    background-color: #ED78A5;
+    background-color: #E56D9B;
     color: #F7F6F9; /* needed to override the default link color */
-    font-weight: 400;
+    font-weight: 700;
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
@@ -201,13 +201,13 @@ a:focus {
 
 .button.contact {
     background-color: transparent;
-    color: #ED78A5;
+    color: #E56D9B;
     text-transform: uppercase;
-    border: 2px solid #ED78A5;
+    border: 2px solid #E56D9B;
 }
 
 .button.contact:hover {
-    background-color: #ED78A5; /* .button.hover code above already reduced opacity */
+    background-color: #E56D9B; /* .button.hover code above already reduced opacity */
     color: #F7F6F9;
 }
 
@@ -224,7 +224,7 @@ a:focus {
 
 #work .row { /* only applying to row class within work id */
     padding-bottom: 25px;
-    border-bottom: 1px solid #ED78A5;
+    border-bottom: 1px solid #E56D9B;
 }
 
 .center { /* to add center class to any HTML elements */
@@ -243,7 +243,7 @@ nav > ul > li > a {
     padding: 0 15px; /* adding padding */
     text-transform: uppercase;
     font-weight: 700;
-    color: #ED78A5;
+    color: #E56D9B;
 }
 
 nav > ul > li > a:hover {
