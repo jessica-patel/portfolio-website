@@ -9,13 +9,13 @@ function menuToggle() { // shows menu links when hamburger is clicked on
     }
 }
 
-function scrollToAnchor(aid){
-    const destination = $("a[name='"+ aid +"']");
-    $('html,body').animate({
-        scrollTop: destination.offset().top
-    },'slow');
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navigation").style.top = "0";
+  } else {
+    document.getElementById("navigation").style.top = "-110px";
+  }
+  prevScrollpos = currentScrollPos;
 }
-
-$(document).on('click', '.smooth-link', function(){
-    scrollToAnchor('contact');
-});

@@ -19,6 +19,10 @@ Evan edits 1.8:
 - Add padding to about
 - Image is tiny in mobile
 
-More questions:
-- not sure why my animation isn't appearing for smallest screen size
+
+
+3rd call - Questions for Evan:
 - how can I make it scroll back up from contact section to home page
+- one of my projects is not showing up for larger screen sizes - I think my file is too big
+- collapse my navigation bar or making it more translucent upon scrolling - recommendations?
+- getting started with converting my projects into HTML/CSS/Javascript

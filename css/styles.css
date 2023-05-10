@@ -13,6 +13,10 @@ CTA (light blue): #89D3FB;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #151E23;
     font-family: 'Roboto', sans-serif;
@@ -114,8 +118,7 @@ footer > div > ul > li {
 
 .animation {
     width: 100%;
-    height:fit-content;
-    display: inline-block;
+    display: block;
 }
 
 @keyframes color-change {
@@ -232,6 +235,11 @@ a:focus {
 }
 
 /* -- NAVIGATION -- */
+
+#navigation {
+    transition: top 0.3s;
+    position: fixed;
+}
 
 nav > ul { /* this selects unordered lists within the nav element */
     list-style-type: none; /* removing bullets */
