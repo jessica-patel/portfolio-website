@@ -1,0 +1,454 @@
+/*
+Colors used:
+Background (very dark blue): #151E23;
+Pop-ups/Bubbles (dark grey): #232E35;
+Text (off-white): #F7F6F9;
+Primary (pink): #ED78A5; new E56D9B
+Secondary (orange): #F19C78;
+Accent (yellow): #F8D77F;
+CTA (light blue): #89D3FB;
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #151E23;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px; /* standard size for body is 16px */
+    font-weight: 300;
+    line-height: 1.6; /* 1.6 times the font-size */
+    color: #F7F6F9;
+}
+
+main {
+    padding-top: 90px; /* 90 because the header has height=90 */
+}
+
+header {
+    background-color: #232E35;
+    /* text-align: center; */
+    padding: 10px 0; /* CF suggested 10 0 4 but I used 10 0 */
+    /* border-bottom: 3px solid #4a4a4a; */
+    /* css-box-shadow ------------ */
+    position: fixed;
+    width: [object Object]px;
+    height: [object Object]px;
+    background: #232E35; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1); 
+    -webkit-box-shadow: 0 0 20px rgba(21, 30, 35, 1); 
+    -moz-box-shadow: 0 0 20px rgba(21, 30, 35, 1); 
+
+    width: 100%; /* since position=fixed was used */
+}
+
+/* -- HEADINGS -- */
+/* CareerFoundry sizings for now*/
+h1, h2, h3, h4 {
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 2.75em;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.67em 0 0 0;
+    line-height: normal;
+}
+  
+h2 {
+    font-size: 2.25em;
+    font-weight: 700;
+    line-height: normal;
+    margin-block-end: 0;
+}
+  
+h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: normal;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h4 {
+    font-size: 1.35em;
+    font-weight: 400;
+}
+
+/* -- IMAGES -- */
+img {
+    width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer > div > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer > div > ul > li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.socials {
+    width: 150%;
+    margin: 5% 5% 0 0;
+    display: inline-block;
+}
+
+.me {
+    width: 45%;
+    max-width: 200px;
+}
+
+.logo {
+    float: left;
+    max-width: 50px;
+    margin: 10px;
+}
+
+.animation {
+    width: 100%;
+    display: block;
+}
+
+@keyframes color-change {
+    0% {fill: #edc655;}
+    50% {fill: #fcffad;}
+    100% {fill: #f76414;}
+}
+
+@keyframes cloud-move {
+    from {transform: translate(0,50px);}
+    to {transform: translate(200px,50px);}
+}
+
+@keyframes cloud-move-reverse {
+    from {transform: translate(446px,48px);}
+    to {transform: translate(100px, 48px);}
+}
+
+.sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;  
+}
+/* This can be written as:
+.sun {
+    animation: 4s color-change infinite alternate linear;
+} */
+
+.cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* -- HERO -- */
+#hero {
+    background-color: #232E35;
+    padding: 20px 0;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+/* -- HYPERLINKS AND BUTTONS -- */
+a,
+a:active { /* active: when being clicked */
+    color: #E56D9B; /* might change to CTA colour */
+    text-decoration: none; /* No underlining */
+  }
+
+/* a:visited {
+    color: #F19C78;
+} */
+
+a:hover,
+a:focus {
+    text-decoration: underline; /* Underlining when hovering over a link */
+}
+
+.button {
+    display: inline-block;
+    background-color: #E56D9B;
+    color: #F7F6F9; /* needed to override the default link color */
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 2px solid #994c30; /* width of the border, type, color */
+    transition-duration: .2s;
+    transition-property: background-color;
+    /* transitions can be combined into "transition: 0.2s opacity;" */
+}
+
+.button:hover {
+    /* background-image: linear-gradient(180deg, #ED78A5, #89D3FB);  */
+    opacity: 80%;/* Reduces the opacity of the button to 80% */
+    text-decoration: none;
+}
+
+.button.contact {
+    background-color: transparent;
+    color: #E56D9B;
+    text-transform: uppercase;
+    border: 2px solid #E56D9B;
+}
+
+.button.contact:hover {
+    background-color: #E56D9B; /* .button.hover code above already reduced opacity */
+    color: #F7F6F9;
+}
+
+/* might add button-secondary and button-small */
+
+/* -- LAYOUT STYLINGS -- */
+.container {
+    padding: 0 15px;
+}
+
+.row {
+    margin: 25px 0 0 0; /* 25px top and bottom, 0 left and right */
+}
+
+#work .row { /* only applying to row class within work id */
+    padding-bottom: 25px;
+    border-bottom: 1px solid #E56D9B;
+}
+
+.center { /* to add center class to any HTML elements */
+    text-align: center;
+}
+
+/* -- NAVIGATION -- */
+
+#navigation {
+    transition: top 0.3s;
+    position: fixed;
+}
+
+nav > ul { /* this selects unordered lists within the nav element */
+    list-style-type: none; /* removing bullets */
+    padding: 0; /* removing auto padding from ul */
+    margin: 0;
+}
+
+nav > ul > li > a {
+    padding: 0 15px; /* adding padding */
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #E56D9B;
+}
+
+nav > ul > li > a:hover {
+    color: #89D3FB;
+    text-decoration: none;
+}
+
+.navtoggle li:not(:last-child) { /* hides menu items on default */
+    display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+    position: relative;
+}
+
+.navtoggle li .icon {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    padding-right: 0; /* removes padding */
+}
+
+.navtoggle.responsive ul {
+    text-align: right;
+}
+
+.navtoggle.responsive nav {
+    padding: 44px 0 0; /* 20px padding between menu items + 24 for icon = 44 */
+}
+
+.navtoggle.responsive li  {
+    display: block; /* places items on separate lines so that they're vertically stacked */
+    padding: 10px 0;
+}
+  
+/* .navtoggle.responsive li:last-child  {
+    padding: 0 0 50px;
+} */
+
+/* Circle behind */
+/* nav.circleBehind a:before, nav.circleBehind a:after
+{
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #0277bd;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+nav.circleBehind a:after
+{
+    border-width: 2px;
+    transition: all 0.4s;
+}
+
+nav.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+nav.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+} */
+
+[class*="col-"] { /* attribute selector, selects for every class with "col-" */
+    float: left;
+    padding: 10px;
+}
+
+.row::after { /* "clearing" the flow so that other elements don't take the spot of the preview picture */
+    content: "";
+    clear: both;
+    display: table;
+}
+
+main::after { /* "clearing" the flow so that other elements don't take the spot of the preview picture */
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
+
+/* CSS for new comp_interactive */
+
+
+#competition {
+    background-color: #FFFFFF;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+/* ------- MEDIA QUERIES ------- */
+
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) { /* when a screen size (viewport width) is 640px or larger, it needs to use the following styling */
+
+    header {
+        text-align: unset;
+        padding: 20px 20px; /* CF had 20px 0 13px */
+    }
+    
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+
+    nav > ul {
+        margin: 1em 0;
+    }
+
+    nav > ul > li { /* this selects list elements in unordered lists within the nav element */
+        display: inline-block; /* moving items to one line */
+    }
+
+    .navtoggle li:not(:last-child) {
+        display: inline-block;
+    }
+
+    .navtoggle li:last-child {
+        display: none;
+    }
+
+    .navtoggle.responsive nav { 
+        padding-top: 0px; 
+    }
+
+    main {
+        padding-top: 70px;
+    }
+    
+    .col-md-6 { /* col=column, md=medium devices, 6=6 column span */
+        width: 50%;
+    }
+    
+    #about-page h3 { 
+        margin-top: 0;
+    }
+}
+    
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+
+    .col-lg-7 { /* left column for project preview images */
+        width: 60%;
+    }
+
+    .col-lg-5 { /* right column for project preview blurbs */
+        width: 40%;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    main {
+        padding-top: 75px;
+    }
+}
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
+
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
+
+}

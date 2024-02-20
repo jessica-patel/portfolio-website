@@ -19,3 +19,24 @@ var currentScrollPos = window.pageYOffset;
   }
   prevScrollpos = currentScrollPos;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const tagButtons = document.querySelectorAll('.tag-btn');
+  const projects = document.querySelectorAll('.project');
+
+  tagButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const selectedTag = this.getAttribute('data-tag');
+
+      projects.forEach(project => {
+        const projectTags = project.getAttribute('data-tags').split(' ');
+
+        if (selectedTag === 'all' || projectTags.includes(selectedTag)) {
+          project.style.display = 'inline-block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    });
+  });
+});
