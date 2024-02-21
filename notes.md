@@ -22,7 +22,11 @@ Evan edits 1.8:
 
 
 3rd call - Questions for Evan:
-- how can I make it scroll back up from contact section to home page
-- one of my projects is not showing up for larger screen sizes - I think my file is too big
-- collapse my navigation bar or making it more translucent upon scrolling - recommendations?
+- how can I make it scroll back up from contact section to home page *
+- one of my projects is not showing up for larger screen sizes - I think my file is too big *
+- collapse my navigation bar or making it more translucent upon scrolling - recommendations? *
 - getting started with converting my projects into HTML/CSS/Javascript
+
+4th call
+- my header keeps jumping up when I scroll up ever since I added the header hiding feature - only for Safari
+- adding new fonts

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'paprikaregular';
+    src: url('paprika-regular-webfont.woff2') format('woff2'),
+         url('paprika-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* font-family: 'Paprika', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Sofia Sans', sans-serif; */

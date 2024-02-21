@@ -16,9 +16,11 @@
         <!-- css -->
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
         <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Paprika&family=Poppins:wght@300&family=Sofia+Sans&display=swap" rel="stylesheet">
         <!-- hamburger menu -->
         <script src="https://kit.fontawesome.com/9dea9f1489.js" crossorigin="anonymous"></script>
     </head>
@@ -48,9 +50,8 @@
             <!-- for the hero section -->
             <div id="hero" name="work">
                 <div class="container">
-                    <h1>Jessica Patel</h1>
-                    <h2>Emerging UX Designer</h2>
-                    <p>Creating accessible, immersive and functional products to optimize user satisfaction.</p>
+                    <h1>Hi, I'm Jessica Patel!</h1>
+                    <p>I am a UX/UI designer with an interest in <span class="pink">game design</span> and <span class="pink">frontend development</span>. <br>I create accessible, immersive and functional products to optimize user satisfaction.</p>
                 </div>
             </div>
 
@@ -58,40 +59,131 @@
             <div id="work">
                 <div class="container">
                     <h2 class="center">My Work</h2>
+
+                    <!-- Tag Selector -->
+                    <div id="container tag-selector" style="opacity: 85%; font-size: 0.8em;">
+                        <p style="display: inline-block;">Filters:  </p>
+                        <button class="tag-btn" data-tag="all">All</button>
+                        <button class="tag-btn" data-tag="uxui">UX/UI</button>
+                        <button class="tag-btn" data-tag="research">Research</button>
+                        <button class="tag-btn" data-tag="game_design">Game Design</button>
+                        <button class="tag-btn" data-tag="programming">Programming</button>
+                        <button class="tag-btn" data-tag="electronics">Electronics</button>
+                        <button class="tag-btn" data-tag="physics">Physics</button>
+                    </div>
+
                     <!-- project preview for Vela -->
-                    <div class="row">
-                        <div class="col-md-6 col-lg-7">
+                    <div class="row project" data-tags="uxui research">
+                        <div class="col-md-6">
                             <picture>
-                                <source srcset="img/vela/vela_preview_1x.jpg" media="(max-width:767px)">
-                                <img src="img/vela/vela_preview_2x.jpg" alt="Vela Case Study Preview">
+                                <source srcset="img/vela/vela_preview.png" media="(max-width:767px)">
+                                <img src="img/vela/vela_preview.png" alt="Vela Case Study Preview">
                             </picture>
                         </div>
-                        <div class="col-md-6 col-lg-5">
-                            <h3>Vela - A UX Case Study</h3>
-                            <p>This water-weather forecasting web app delivers convenience and safety to water-sport enthusiasts through visual weather reports that are easy-to-comprehend. Water-sport enthusiasts can quickly view summarized views and full-reports, which is ideal for people on the go! This case study displays my full set of skills in UX/UI such as usability testing, visual design and prototyping.
+                        <div class="col-md-6">
+                            <h3>Vela: Water-Weather Web App</h3>
+                            <p>A water-weather forecasting web app that delivers convenience and safety to water-sport enthusiasts through intuitive visual weather reports.
                             </p>
+                            <h4>Tags:
+                                <span class="keys">UX/UI</span> 
+                                <span class="keys">User Research</span>
+                                <span class="keys">Prototyping</span>
+                                <span class="keys">Usability Testing</span>
+                            </h4>
+                            <a href="vela.html" class="button">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- project preview for Portfolio Website -->
+                    <div class="row project" data-tags="uxui programming">
+                        <div class="col-md-6">
+                            <picture>
+                                <source srcset="img/portfolio/portfolio_preview.png" media="(max-width:767px)">
+                                <img src="img/portfolio/portfolio_preview.png" alt="Portfolio Development Preview">
+                            </picture>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Portfolio Website Development</h3>
+                            <p>The design and development process of this very website!
+                            </p>
+                            <h4>Tags:
+                                <span class="keys">UX/UI</span> 
+                                <span class="keys">User Research</span>
+                                <span class="keys">HTML</span>
+                                <span class="keys">CSS</span>
+                                <span class="keys">JavaScript</span>
+                                <span class="keys">Usability Testing</span>
+                            </h4>
                             <a href="vela.html" class="button">View Project</a>
                         </div>
                     </div>
 
                     <!-- project preview for Ubisoft Competition -->
-                    <div class="row">
-                        <div class="col-md-6 col-lg-7">
+                    <div class="row project" data-tags="uxui game_design research">
+                        <div class="col-md-6">
                             <picture>
                                 <source srcset="img/ubisoft/competition_preview_1x.jpg" media="(max-width:767px)">
                                 <img src="img/ubisoft/competition_preview_2x.jpg" alt="Ubisoft Competition Preview">
                             </picture>
                         </div>
-                        <div class="col-md-6 col-lg-5">
-                            <h3>Game UX Design Competition - Ubisoft Toronto NEXT</h3>
-                            <p>This competition involved taking an existing third-person role-playing game, discovering pain points and proposing new UX solutions for a new game. This presentation shows how I compiled desktop research with user surveys to identify pain-points in the game, Assassin’s Creed Odyssey, to propose new solutions revolving around immersion and convenience.
+                        <div class="col-md-6">
+                            <h3>Assassin's Creed Redesign: Ubisoft Toronto NEXT</h3>
+                            <p>A redesign of menus and game mechanics for Assassin's Creed: Odyssey. Pain-points were identified to improve immersion and convenience.
                             </p>
+                            <h4>Tags:
+                                <span class="keys">UX/UI</span> 
+                                <span class="keys">Games</span>
+                                <span class="keys">User Research</span>
+                                <span class="keys">User Surveys</span>
+                            </h4>
                             <a href="competition.html" class="button">View Project</a>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6 col-lg-7">
+                    <!-- project preview for Develop Competition -->
+                    <div class="row project" data-tags="game_design research">
+                        <div class="col-md-6">
+                            <picture>
+                                <source srcset="img/watch_dogs/develop_preview.png" media="(max-width:767px)">
+                                <img src="img/watch_dogs/develop_preview.png" alt="Develop Competition Preview">
+                            </picture>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Watch Dogs Character Design: Ubisoft Develop</h3>
+                            <p>Designing a new character concept for Watch Dogs: Legion. All aspects such as mechanics, abilities, playstyle and accessiblity were outlined.
+                            </p>
+                            <h4>Tags:
+                                <span class="keys">Games</span>
+                                <span class="keys">Desktop Research</span>
+                            </h4>
+                            <a href="watch_dogs.html" class="button">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- project preview for Dental Website -->
+                    <div class="row project" data-tags="uxui programming">
+                        <div class="col-md-6">
+                            <picture>
+                                <source srcset="img/dental/dental_preview.png" media="(max-width:767px)">
+                                <img src="img/dental/dental_preview.png" alt="Dental Website Preview">
+                            </picture>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Dental Clinic Website</h3>
+                            <p>The design and development process of a simple, polished dental clinic website that I made for a client.
+                            </p>
+                            <h4>Tags:
+                                <span class="keys">UX/UI</span> 
+                                <span class="keys">Games</span>
+                                <span class="keys">User Research</span>
+                                <span class="keys">User Surveys</span>
+                            </h4>
+                            <a href="dental.html" class="button">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="row project" data-tags="">
+                        <div class="col-md-6">
                             <svg id="about-picture" xmlns="http://www.w3.org/2000/svg" class="berlin-illustration animation" viewBox="0 0 700 505" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <defs>
                                     <polygon id="a" points=".06 231.917 .06 .929 688.717 .929 688.717 231.917"></polygon>
@@ -692,10 +784,8 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="col-md-6 col-lg-5">
+                        <div class="col-md-6">
                             <h3>CSS Animation</h3>
-                            <p>An example of a CSS animation.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -709,7 +799,7 @@
                 <p>Have any thoughts or questions about my work? Feel free to reach out to me using the links below!
                 </p>
                 <div>
-                    <a href="mailto:jessica_patel9@hotmail.com" class="button contact">Email me!</a>
+                    <a href="mailto:jessica_patel9(at)hotmail.com" class="button contact">Email me!</a>
                 </div>
                 <ul class="socials_links">
                     <li><a href="https://www.linkedin.com/in/jessica-patel-in/" target="_blank">
