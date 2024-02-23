@@ -264,8 +264,8 @@ a:focus {
 }
 
 .keys {
-    display: inline;
-    margin-right: 10px;
+    display: inline-block;
+    margin: 5px;
     padding: 5px;
     border: 1px solid #f7f6f960; /* colour and two numbers at the end for transparency */
     color: #F7F6F9;
@@ -357,6 +357,10 @@ main::after { /* "clearing" the flow so that other elements don't take the spot 
 
 /* ------- MEDIA QUERIES ------- */
 
+@media only screen and (max-width: 600px) {
+
+}
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -425,9 +429,9 @@ Large devices (1024px or larger)
         margin-right: auto;
     }
 
-    .row {
-        width: 100%;
-    }
+    /* .row { */
+        /* width: 100%; */
+    /* } */
 
     main {
         padding-top: 75px;
