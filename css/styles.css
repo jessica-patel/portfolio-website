@@ -85,6 +85,10 @@ h4 {
     color: #E56D9B;
 }
 
+.blue {
+    color: #89D3FB;
+}
+
 /* -- IMAGES -- */
 img {
     width: 100%;
@@ -177,7 +181,7 @@ footer > div > ul > li {
 /* -- HYPERLINKS AND BUTTONS -- */
 a,
 a:active { /* active: when being clicked */
-    color: #E56D9B; /* might change to CTA colour */
+    color: #89D3FB; /* might change to CTA colour */
     text-decoration: none; /* No underlining */
   }
 
@@ -235,7 +239,7 @@ a:focus {
 
 #work .row { /* only applying to row class within work id */
     padding-bottom: 25px;
-    border-bottom: 1px solid #E56D9B;
+    border-bottom: 1px solid #89D3FB;
 }
 
 #tag-selector {
